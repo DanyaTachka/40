@@ -1,0 +1,145 @@
+
+body {
+    font-family: Arial;
+    background-color: #eee;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* A */
+
+.card {
+    width: 200px;
+    height: 250px;
+    background: white;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* B */
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery img {
+    transition: 0.3s;
+}
+
+.gallery:hover img:not(:hover) {
+    filter: brightness(0.7);
+}
+
+.gallery img:hover {
+    transform: rotate(3deg) scale(1.1);
+    box-shadow: 0 5px 15px gray;
+}
+
+/* C */
+
+.project {
+    width: 350px;
+    height: 250px;
+    margin: auto;
+    background-image: url("https://picsum.photos/id/60/350/250");
+    background-size: cover;
+    overflow: hidden;
+}
+
+.info {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    height: 100%;
+    padding-top: 40px;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+    transition: 0.4s;
+}
+
+.project:hover .info {
+    transform: translateX(0);
+}
+
+/* D */
+
+.product {
+    background: white;
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    margin: auto;
+}
+
+.product img {
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    animation: fade 0.3s;
+}
+
+.window {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    animation: slide 0.4s;
+}
+
+.window img {
+    width: 250px;
+}
+
+.window span {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

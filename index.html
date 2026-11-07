@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Hover Effects</h1>
+
+    <h2>Завдання A</h2>
+
+    <div class="card">
+        <h3>Данило</h3>
+        <p>Student</p>
+    </div>
+
+
+    <h2>Завдання B</h2>
+
+    <div class="gallery">
+        <img src="https://picsum.photos/id/10/200/150" alt="Фото">
+        <img src="https://picsum.photos/id/20/200/150" alt="Фото">
+        <img src="https://picsum.photos/id/30/200/150" alt="Фото">
+    </div>
+
+
+    <h2>Завдання C</h2>
+
+    <div class="project">
+        <div class="info">
+            <h3>My Project</h3>
+            <p>My first website</p>
+            <button>Переглянути</button>
+        </div>
+    </div>
+
+
+    <h2>Завдання D</h2>
+
+    <div class="product">
+        <img src="https://picsum.photos/id/250/250/150" alt="Watch">
+        <h3>Watch</h3>
+        <p>Ціна: 50€</p>
+        <button onclick="openModal()">Переглянути</button>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="window">
+            <span onclick="closeModal()">X</span>
+
+            <img src="https://picsum.photos/id/250/250/150" alt="Watch">
+            <h3>Watch</h3>
+            <p>Ціна: 50€</p>
+            <p>Good watch for everyday use.</p>
+
+            <button onclick="alert('Додано!')">Додати в кошик</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("modal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
